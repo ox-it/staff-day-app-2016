@@ -9,15 +9,15 @@ define([
 	var data = {
 		1: {
 			text: "Find the first location",
-			clue: "Lorem ipsum"
+			clue: "Ahoy matey, treasure awaits on the far side of the island"
 		},
 		2: {
 			text: "Find the second location",
-			clue: "Lorem ipsum"
+			clue: "Polly knows, but he’s not much of a talker"
 		},
 		3: {
-			text: "Find the final location",
-			clue: "Lorem ipsum"
+			text: "Find the third location",
+			clue: "squawk! Pirate cave. Squawk! "
 		}
 	};
 
