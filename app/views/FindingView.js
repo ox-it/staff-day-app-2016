@@ -25,6 +25,7 @@ define([
 
 		initialize: function (params) {
 			this.index = params.index;
+			this.listenTo(Backbone, 'beaconRange:' + this.index, this.seenBeacon.bind(this));
 		},
 
 		template: findingTemplate,
@@ -35,6 +36,12 @@ define([
 
 		events: {
 			"click .found": "goToFound"
+		},
+		
+		seenBeacon: function (beaconData) {
+			if(beaconData.proximity == 'ProximityImmediate' || beaconData.proximity == 'ProximityNear') {
+				this.goToFound();
+			}
 		},
 		
 		goToFound: function () {
