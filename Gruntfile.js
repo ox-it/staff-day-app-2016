@@ -4,7 +4,9 @@
     
     var plugins = [
         'cordova-plugin-device',
-        //add further plugins here
+        'cordova-plugin-ble',
+        'cordova-plugin-vuforia',
+        'https://github.com/ox-it/cordova-mic-levels-plugin'
     ]
     
     var platforms = [

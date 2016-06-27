@@ -28,22 +28,21 @@ bower install
 ```
 initialise cordova:
 ```
-cordova setup
+grunt setup
 ```
 This grunt command adds all platforms and plugins listed in the arrays in Gruntfile.js
 
 ### Run
 Build & run on device or emulator with the following grunt tasks
 ```
-grunt ios
-grunt ios-sim
-grunt android
-grunt android-sim
+grunt package
+cordova run ios --device
+
 ```
 
-## Customising
-Duplicate and modify the example Model, Collection, View, Template and Router.
+or for android
 
-#### Adding plugins
-1. Add the plugin to the array in the top of Gruntfile.js
-2. Run `grunt plugins`
+```
+grunt package
+cordova run android --device
+```
