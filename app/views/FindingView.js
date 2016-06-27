@@ -9,15 +9,15 @@ define([
 	var data = {
 		1: {
 			text: "Find the first location",
-			clue: "Lorem ipsum"
+			clue: "Ahoy matey, treasure awaits on the far side of the island"
 		},
 		2: {
 			text: "Find the second location",
-			clue: "Lorem ipsum"
+			clue: "Polly knows, but he’s not much of a talker"
 		},
 		3: {
-			text: "Find the final location",
-			clue: "Lorem ipsum"
+			text: "Find the third location",
+			clue: "squawk! Pirate cave. Squawk! "
 		}
 	};
 
@@ -25,6 +25,7 @@ define([
 
 		initialize: function (params) {
 			this.index = params.index;
+			this.listenTo(Backbone, 'beaconRange:' + this.index, this.seenBeacon.bind(this));
 		},
 
 		template: findingTemplate,
@@ -35,6 +36,12 @@ define([
 
 		events: {
 			"click .found": "goToFound"
+		},
+		
+		seenBeacon: function (beaconData) {
+			if(beaconData.proximity == 'ProximityImmediate' || beaconData.proximity == 'ProximityNear') {
+				this.goToFound();
+			}
 		},
 		
 		goToFound: function () {
