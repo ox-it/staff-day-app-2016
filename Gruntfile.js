@@ -136,7 +136,8 @@
                                 "app/libs/bootstrap/dist/js/bootstrap.js",
                                 "app/libs/bootstrap/dist/css/bootstrap.css",
 						        "img/**",
-						        "css/**"
+						        "css/**",
+                                "targets/**"
 					        ],
 					        dest:"www" },
 				        {

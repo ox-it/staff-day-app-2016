@@ -18,6 +18,5 @@
     <gap:config-file parent="UIViewControllerBasedStatusBarAppearance" platform="ios">
         <false />
     </gap:config-file>
-    <plugin name="com.unarin.cordova.beacon" spec="~3.4.0" />
     <plugin name="uk.ac.ox.it.microphone-levels" spec="https://github.com/ox-it/cordova-mic-levels-plugin.git" />
 </widget>
